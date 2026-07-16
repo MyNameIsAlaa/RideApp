@@ -17,7 +17,9 @@ import {updatePickUp, updateDestination}from '@/store/features/ride/rideSlice'
 import { useNavigation } from '@react-navigation/native';
 import Geolocation from '@react-native-community/geolocation';
 
-Geocoder.init('AIzaSyAIZsRvrF_6w4nnuhrEX51O060mwTdveBc');
+import Config from 'react-native-config';
+
+Geocoder.init(Config.GOOGLE_API_KEY || '');
 
 const MapScreen = () => {
 

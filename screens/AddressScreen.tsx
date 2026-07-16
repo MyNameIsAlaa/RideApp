@@ -16,7 +16,9 @@ import { Icon,CloseCircleIcon } from "@/components/ui/icon"
 import { Button, ButtonText } from "@/components/ui/button"
 import { Heart } from "lucide-react-native"
 
-const GOOGLE_API_KEY = 'AIzaSyAIZsRvrF_6w4nnuhrEX51O060mwTdveBc';
+import Config from 'react-native-config';
+
+const GOOGLE_API_KEY = Config.GOOGLE_API_KEY || '';
 
 const AddressScreen = props => {
   const [addressType, setaddresstype] = useState('');

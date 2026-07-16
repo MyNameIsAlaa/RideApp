@@ -35,7 +35,9 @@ import {
 } from "lucide-react-native"
 import { Icon } from "@/components/ui/icon"
 
-const GOOGLE_API_KEY = 'AIzaSyAIZsRvrF_6w4nnuhrEX51O060mwTdveBc';
+import Config from 'react-native-config';
+
+const GOOGLE_API_KEY = Config.GOOGLE_API_KEY || '';
 
 Geocoder.init(GOOGLE_API_KEY);
 

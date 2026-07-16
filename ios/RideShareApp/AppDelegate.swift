@@ -7,7 +7,8 @@ import GoogleMaps  // Add this line
 @main
 class AppDelegate: RCTAppDelegate {
   override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    GMSServices.provideAPIKey("AIzaSyAIZsRvrF_6w4nnuhrEX51O060mwTdveBc")
+    let apiKey = RNCConfig.env(for: "GOOGLE_API_KEY") ?? ""
+    GMSServices.provideAPIKey(apiKey)
     self.moduleName = "RideShareApp"
     self.dependencyProvider = RCTAppDependencyProvider()
 
